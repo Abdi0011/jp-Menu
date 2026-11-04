@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="so"><head><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6f4e37"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<title>JP Cafe &amp; Restaurant Menu</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+<style>
+:root{--c:#6f4e37;--d:#3e2a1e;--t:#f6efe9;--l:#eadfd5}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:#fff;color:var(--d);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:100px}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer;border:0;background:none}
+header{background:var(--c);color:#fff;padding:calc(14px + env(safe-area-inset-top,0px)) 16px 18px;border-radius:0 0 26px 26px;position:relative;overflow:hidden}
+.top{display:flex;align-items:center;gap:12px}
+.lg{width:54px;height:54px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;overflow:hidden;flex:none}
+.lg img{width:100%;height:100%;object-fit:cover}
+h1{font-size:18px;margin:0;line-height:1.2}h3{margin:14px 0 4px;font-size:14px;color:var(--c)}
+.cur{display:flex;gap:3px;margin-left:auto;background:rgba(255,255,255,.2);border-radius:999px;padding:3px}
+.cur button{color:#fff;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:700;transition:.3s}
+.cur button.on{background:#fff;color:var(--c)}
+.hero{position:absolute;right:-8px;bottom:-16px;font-size:90px;opacity:.13;animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(8deg)}}
+.sr input{width:100%;border:0;border-radius:14px;padding:12px 16px;margin-top:14px;background:#fff;position:relative}
+nav{position:sticky;top:0;z-index:5;background:#fff;display:flex;gap:8px;overflow-x:auto;padding:12px 14px;scrollbar-width:none}
+nav button{flex:none;padding:8px 14px;border-radius:999px;background:var(--t);font-size:14px;font-weight:600;transition:.25s}
+nav button.on{background:var(--c);color:#fff;transform:scale(1.06)}
+main{padding:0 14px;max-width:920px;margin:0 auto}
+h2{font-size:17px;margin:18px 2px 8px;color:var(--c)}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.cd{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--l);border-radius:18px;padding:12px;width:100%;text-align:left;animation:up .5s both;animation-delay:calc(var(--i)*35ms);transition:transform .2s,box-shadow .2s}
+.cd:active{transform:scale(.97)}.cd:hover{box-shadow:0 6px 18px rgba(111,78,55,.16)}.cd.out{opacity:.5}
+@keyframes up{from{opacity:0;transform:translateY(16px)}}
+.em{width:64px;height:64px;border-radius:16px;background:var(--t);display:flex;align-items:center;justify-content:center;font-size:34px;flex:none}
+.sb{font-size:12px;color:#8b7565}.ce{text-align:center;color:#8b7565}
+.o{display:inline-flex;height:1.2em;line-height:1.2em;white-space:pre;font-weight:800;color:var(--c)}
+.o>span{display:block}.d{display:block;height:1.2em;overflow:hidden;font-style:normal}
+.d b{display:block;font-weight:inherit;transition:transform .9s cubic-bezier(.2,.9,.2,1)}
+.big{font-size:22px}
+footer{text-align:center;padding:26px 14px;font-size:14px;color:#8b7565}
+footer a{color:var(--c);font-weight:700}#gear{display:block;margin:10px auto 0;font-size:12px;color:#b9a798}
+#bar{position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));z-index:6;display:none}
+#bar button{display:flex;justify-content:space-between;width:100%;max-width:560px;margin:0 auto;background:var(--c);color:#fff;border-radius:16px;padding:15px 18px;font-weight:700;box-shadow:0 8px 24px rgba(62,42,30,.35)}
+#bar .o{color:#fff}.bn{animation:bn .5s}@keyframes bn{40%{transform:translateY(-10px)}}
+#ov{position:fixed;inset:0;background:rgba(62,42,30,.55);z-index:20;display:none;align-items:flex-end;justify-content:center}
+#ov.show{display:flex}
+.sh{position:relative;background:#fff;width:100%;max-width:560px;max-height:92vh;overflow:auto;border-radius:24px 24px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px));animation:sl .35s cubic-bezier(.2,.9,.2,1)}
+@keyframes sl{from{transform:translateY(60px);opacity:0}}
+.x{position:absolute;right:14px;top:10px;font-size:20px;color:var(--c)}
+.bg{font-size:60px;text-align:center}.c{color:var(--c)}h1.c{text-align:center}
+.op{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--l)}
+.qt{display:flex;align-items:center;gap:12px}
+.qt button{width:34px;height:34px;border-radius:50%;background:var(--t);font-size:18px;font-weight:700;color:var(--c)}
+.pri{display:block;width:100%;background:var(--c);color:#fff;border-radius:14px;padding:13px;font-weight:700;margin-top:12px;text-align:center;text-decoration:none}
+input:not([type=radio]):not([type=checkbox]),select,textarea{width:100%;border:1px solid var(--l);border-radius:10px;padding:9px;background:#fff}
+.pn{margin-top:8px;font-size:14px;background:var(--t);border-radius:10px;padding:8px 10px}.pn:empty{display:none}.cp{background:var(--c);color:#fff;border-radius:8px;padding:2px 10px;font-size:12px;margin-left:6px}
+.py{display:flex;flex-wrap:wrap;gap:8px}.py label{flex:1 1 28%;text-align:center;border:1px solid var(--l);border-radius:10px;padding:9px 2px;font-size:13px}
+.py input{display:none}.py label:has(input:checked){border-color:var(--c);background:var(--t);font-weight:700}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:22px 0 8px}.tabs button{flex:none;padding:7px 12px;border-radius:999px;background:var(--t);font-size:13px;font-weight:600}.tabs .on{background:var(--c);color:#fff}
+.rw{display:flex;gap:6px;margin:6px 0}.rw .e{width:56px;flex:none;text-align:center}
+.it{border:1px solid var(--l);border-radius:12px;padding:8px 10px;margin:8px 0}.it summary{font-weight:600}
+label.f{display:block;font-size:12px;color:#8b7565;margin-top:8px}
+#sp{position:fixed;inset:0;background:var(--c);color:#fff;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;font-weight:700;font-size:20px;animation:sp 1.8s forwards}
+#sp .lg{width:96px;height:96px;font-size:50px;animation:pop 1s}
+@keyframes sp{70%{opacity:1}to{opacity:0;visibility:hidden}}@keyframes pop{from{transform:scale(.3) rotate(-20deg);opacity:0}}
+#qr{display:flex;justify-content:center;margin:12px 0}
+.tk{border:1px solid var(--l);border-radius:14px;padding:10px 12px;margin:10px 0;animation:up .4s}.tk.cusub{border-color:var(--c);background:var(--t)}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head><body data-new-gr-c-s-check-loaded="14.1344.0" data-gr-ext-installed="">
+<div id="sp"><div class="lg" id="sl" data-dyn=""></div><div id="sn" data-dyn=""></div></div>
+<header><div class="top"><div class="lg" id="lg" data-dyn=""></div><h1 id="nm" data-dyn=""></h1><div class="cur" id="cu" data-dyn=""></div></div>
+<div class="sr"><input id="q" type="search" placeholder="🔍 Raadi cunto ama cabitaan…"></div><div class="hero">☕</div></header>
+<nav id="nv" data-dyn=""></nav><main id="ls" data-dyn=""></main>
+<footer><div id="ft" data-dyn=""></div><button id="gear">⚙ Maamul</button></footer>
+<div id="bar" data-dyn="" style="display: none;"></div><div id="ov" data-dyn="" class=""></div>
+<script id="dt" type="application/json">{"v":1793786720313,"name":"JP Cafe & Restaurant Menu","logo":"","phone":"0907283347","wa":"","tb":10,"pin":"0099","fb":"https://console.firebase.google.com/u/0/project/jp-menu-ff2a1/database/jp-menu-ff2a1-default-rtdb/data/~2F","staff":[{"n":"Cashier","pin":"1111"},{"n":"Shaqaale","pin":""},{"n":"Shaqaale","pin":""},{"n":"Shaqaale","pin":""}],"pay":[{"n":"EVC Plus","no":""},{"n":"eDahab","no":""},{"n":"Sahal","no":""},{"n":"MyCash","no":""},{"n":"T-Plus","no":""},{"n":"Cash","no":""}],"cur":[{"c":"USD","s":"$","r":1},{"c":"SOS","s":"Sh","r":570}],"cats":[{"id":"b","n":"Quraac","e":"🍳"},{"id":"l","n":"Qado","e":"🍛"},{"id":"d","n":"Casho","e":"🍽️"},{"id":"a","n":"Casariye","e":"🥪"},{"id":"k","n":"Cake","e":"🍰"},{"id":"c","n":"Coffee","e":"☕"},{"id":"t","n":"Shaah","e":"🍵"},{"id":"s","n":"Sharaab","e":"🥤"},{"id":"w","n":"Biyo","e":"💧"},{"id":"h","n":"Chicken","e":"🍗"}],"items":[{"id":1,"c":"b","e":"🥞","n":"Canjeero iyo Shaah","p":1,"x":[{"n":"malab","p":0.7},{"n":"moos","p":4}]},{"id":2,"c":"b","e":"🍳","n":"Ukun Fiiqan","p":3.5,"x":[{"n":"Farmaajo","p":1}]},{"id":3,"c":"l","e":"🍛","n":"Bariis iyo Hilib","p":8,"x":[{"n":"Bariis dheeri ah","p":1.5},{"n":"Suugo","p":0.5}]},{"id":4,"c":"l","e":"🍝","n":"Baasto","p":5},{"id":5,"c":"d","e":"🥩","n":"Hilib la Duban","p":9},{"id":6,"c":"d","e":"🍕","n":"Pizza","p":5,"v":[{"n":"Yar","p":5},{"n":"Dhexe","p":7},{"n":"Weyn","p":10}]},{"id":7,"c":"a","e":"🥟","n":"Sambuus","p":2},{"id":8,"c":"a","e":"🍔","n":"Burger","p":5,"x":[{"n":"Farmaajo","p":1}]},{"id":9,"c":"k","e":"🍫","n":"Keeg Shukulaati","p":3.5},{"id":10,"c":"k","e":"🎂","n":"Keeg Fanilla","p":3},{"id":11,"c":"c","e":"☕","n":"Cappuccino","p":2,"v":[{"n":"Yar","p":2},{"n":"Weyn","p":3}],"x":[{"n":"Caano dheeri ah","p":0.5},{"n":"Sonkor","p":0}]},{"id":12,"c":"c","e":"☕","n":"Espresso","p":1.5},{"id":13,"c":"t","e":"🍵","n":"Shaah","p":1,"v":[{"n":"Xawaash","p":1},{"n":"Caano","p":1.5},{"n":"Cagaar","p":1},{"n":"Jinjabiil","p":1.5}],"x":[{"n":"Caano","p":0.5},{"n":"Biyo kulul","p":0.3},{"n":"Malab","p":0.5}]},{"id":14,"c":"s","e":"🥭","n":"Casiir Cambe","p":2,"v":[{"n":"Koob","p":2},{"n":"Weyn","p":3}]},{"id":15,"c":"s","e":"🍋","n":"Casiir Liin","p":2},{"id":16,"c":"w","e":"💧","n":"Biyo","p":0.5,"v":[{"n":"Yar","p":0.5},{"n":"Weyn","p":1}]},{"id":17,"c":"h","e":"🍗","n":"Digaag la Dubay","p":5,"v":[{"n":"Rubuc","p":5},{"n":"Badh","p":9},{"n":"Dhan","p":16}],"x":[{"n":"Baradho","p":1.5},{"n":"Salad","p":1}]},{"id":18,"c":"h","e":"🍗","n":"Digaag Shiilan","p":7}]}</script>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let D=JSON.parse($('#dt').textContent),S={cat:'all',q:'',ci:0,cart:[],tab:0,pay:'EVC Plus',tbl:'1'};
+try{let l=JSON.parse(localStorage.getItem('jpd'));if(l&&l.v>D.v)D=l;S.ci=+localStorage.getItem('jpc')||0}catch(e){}
+if(!D.pay)D.pay=JSON.parse($('#dt').textContent).pay;
+D.staff=D.staff||[];D.fb=D.fb||'';
+const save=()=>{D.v=Date.now();try{localStorage.setItem('jpd',JSON.stringify(D))}catch(e){}};
+const cur=()=>D.cur[S.ci]||D.cur[0],byId=id=>D.items.find(m=>m.id==id);
+const fmt=v=>{let c=cur(),x=v*c.r,n=c.r>=50?Math.round(x).toLocaleString('en'):x.toFixed(2);return /^[$€£]/.test(c.s)?c.s+n:n+' '+c.s};
+function odo(el,txt){let a=[...txt],p=txt.replace(/\d/g,'#');
+ if(el._p!=p){el.innerHTML=a.map(c=>/\d/.test(c)?'<i class="d"><b>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</b></i>':'<span>'+c+'</span>').join('');el._p=p;el.offsetWidth}
+ a.forEach((c,i)=>{if(/\d/.test(c))el.children[i].firstChild.style.transform='translateY(-'+c*1.2+'em)'})}
+const odos=()=>document.querySelectorAll('.o').forEach(e=>odo(e,fmt(+e.dataset.v)));
+const unit=l=>{let m=byId(l.id),b=l.vi>=0?m.v[l.vi].p:m.p;l.x.forEach(i=>b+=m.x[i].p);return b};
+const tot=()=>S.cart.reduce((s,l)=>s+unit(l)*l.q,0);
+const lo=m=>m.v&&m.v.length?Math.min(...m.v.map(a=>a.p)):m.p;
+function render(){
+ S.cart=S.cart.filter(l=>byId(l.id));
+ document.title=D.name;$('#nm').textContent=D.name;$('#sn').textContent=D.name;
+ let lg=D.logo?`<img src="${D.logo}" alt="">`:'☕';$('#lg').innerHTML=lg;$('#sl').innerHTML=lg;
+ $('#cu').innerHTML=D.cur.map((c,i)=>`<button class="${i==S.ci?'on':''}" data-ci="${i}">${esc(c.c)}</button>`).join('');
+ $('#nv').innerHTML=[{id:'all',n:'Dhammaan',e:'✨'},...D.cats].map(c=>`<button class="${S.cat==c.id?'on':''}" data-cat="${c.id}">${c.e} ${esc(c.n)}</button>`).join('');
+ let q=S.q.toLowerCase(),k=0,h='';
+ (S.cat=='all'?D.cats:D.cats.filter(c=>c.id==S.cat)).forEach(c=>{let L=D.items.filter(m=>m.c==c.id&&(!q||m.n.toLowerCase().includes(q)));if(!L.length)return;
+  h+=`<h2>${c.e} ${esc(c.n)}</h2><div class="g">`+L.map(m=>`<button class="cd${m.on===false?' out':''}" style="--i:${k++}" data-it="${m.id}"><div class="em">${m.e}</div><div><b>${esc(m.n)}</b>${m.on===false?'<div class="sb">Dhammaaday</div>':''}<div>${m.v&&m.v.length>1?'<span class="sb">laga bilaabo </span>':''}<span class="o" data-v="${lo(m)}"></span></div></div></button>`).join('')+'</div>'});
+ $('#ls').innerHTML=h||'<p class="ce">Waxba lama helin</p>';
+ $('#ft').innerHTML=`📞 Cabasho ama talo ku saabsan adeegga wac: <a href="tel:${esc(D.phone)}">${esc(D.phone)}</a>`;
+ bar();odos()}
+function bar(){let n=S.cart.reduce((s,l)=>s+l.q,0),b=$('#bar');b.style.display=n?'block':'none';b.innerHTML=`<button id="ob"><span>🛒 ${n} cunto</span><span class="o" data-v="${tot()}"></span></button>`;odos()}
+function sh(h,c=''){$('#ov').innerHTML=`<div class="sh ${c}"><button class="x" id="cl" aria-label="Xir">✕</button>${h}</div>`;$('#ov').classList.add('show');odos()}
+const hide=()=>{clearInterval(window.PT);$('#ov').classList.remove('show')};
+function item(id){let m=byId(id);if(!m||m.on===false)return;let V=m.v||[],E=m.x||[],q=1;
+ sh(`<div class="bg">${m.e}</div><h1 class="c">${esc(m.n)}</h1>`+(V.length?'<h3>Dooro nooca</h3>'+V.map((a,i)=>`<label class="op"><span><input type="radio" name="vr" value="${i}"${i?'':' checked'}> ${esc(a.n)}</span><span class="o" data-v="${a.p}"></span></label>`).join(''):'')+(E.length?'<h3>Dheeraad</h3>'+E.map((a,i)=>`<label class="op"><span><input type="checkbox" class="xx" value="${i}"> ${esc(a.n)}</span><span class="o" data-v="${a.p}"></span></label>`).join(''):'')+`<textarea id="nt" rows="2" placeholder="Fariin (tusaale: sonkor yar)"></textarea><div class="op"><div class="qt"><button id="mi">−</button><b id="qn">1</b><button id="pl">+</button></div><span class="o big" id="tt"></span></div><button class="pri" id="ad">Ku dar dalabka</button>`);
+ const calc=()=>({id:m.id,vi:V.length?+document.querySelector('[name=vr]:checked').value:-1,x:[...document.querySelectorAll('.xx:checked')].map(e=>+e.value),q,nt:$('#nt').value.slice(0,120)});
+ const R=()=>{$('#qn').textContent=q;let v=unit(calc())*q;$('#tt').dataset.v=v;odo($('#tt'),fmt(v))};
+ document.querySelectorAll('.sh input').forEach(i=>i.onchange=R);
+ $('#pl').onclick=()=>{q++;R()};$('#mi').onclick=()=>{if(q>1){q--;R()}};
+ $('#ad').onclick=()=>{S.cart.push(calc());hide();bar();let b=$('#bar');b.classList.remove('bn');void b.offsetWidth;b.classList.add('bn')};R()}
+const payInfo=()=>{let p=D.pay.find(x=>x.n==S.pay)||{};return p.no?`Ku bixi lambarka: <b>${esc(p.no)}</b> <button class="cp" data-cp="${esc(p.no)}">Koobiyee</button>`:''};
+function cart(){if(!S.cart.length)return;if(!D.pay.some(x=>x.n==S.pay))S.pay=D.pay[0]?D.pay[0].n:'Cash';
+ sh('<h1 class="c">Dalabkaaga</h1>'+S.cart.map((l,i)=>{let m=byId(l.id);return`<div class="op"><div><b>${m.e} ${esc(m.n)}</b><div class="sb">${l.vi>=0?esc(m.v[l.vi].n):''} ${l.x.map(j=>'+'+esc(m.x[j].n)).join(' ')} ${l.nt?'“'+esc(l.nt)+'”':''}</div><span class="o" data-v="${unit(l)*l.q}"></span></div><div class="qt"><button data-q="${i}" data-d="-1">−</button><b>${l.q}</b><button data-q="${i}" data-d="1">+</button></div></div>`}).join('')
+ +`<div class="op"><b>Wadarta</b><span class="o big" data-v="${tot()}"></span></div><h3>Lambarka miiska</h3><select id="tb">${Array.from({length:+D.tb||10},(_,i)=>`<option${S.tbl==i+1?' selected':''}>${i+1}</option>`).join('')}</select><h3>Habka lacag bixinta</h3><div class="py">${D.pay.map(p=>`<label><input type="radio" name="py" value="${esc(p.n)}"${S.pay==p.n?' checked':''}><span>${esc(p.n)}</span></label>`).join('')}</div><div class="pn" id="pn">${payInfo()}</div><button class="pri" id="sd">Dir dalabka</button>`)}
+async function send(){let no=Math.floor(Math.random()*9000+1000),t=tot(),L=S.cart.map(l=>{let m=byId(l.id);return'• '+l.q+'x '+m.n+(l.vi>=0?' ('+m.v[l.vi].n+')':'')+(l.x.length?' +'+l.x.map(i=>m.x[i].n).join(', '):'')+(l.nt?' ['+l.nt+']':'')}).join('\n');
+ let msg=`${D.name}\nDalab #${no}\nMiiska: ${S.tbl}\nLacag: ${S.pay}\n${L}\nWadarta: ${fmt(t)}`;let ok=!FB();if(!ok){try{let rs=await fetch(FB()+'/orders.json',{method:'POST',body:JSON.stringify({no,tbl:S.tbl,pay:S.pay,l:L,tot:t,t:Date.now(),st:'cusub'})});ok=rs.ok}catch(e){}}S.cart=[];bar();
+ sh(`<div class="bg">✅</div><h1 class="c">${ok?'Dalabkaaga waa la helay!':'Dalabka lama gaarin'}</h1><p class="ce">Dalab #${no} · Miiska ${S.tbl} · ${S.pay}</p><div class="pn">${payInfo()}</div><div class="ce"><span class="o big" data-v="${t}"></span></div>`+(D.wa?`<a class="pri" href="https://wa.me/${String(D.wa).replace(/\D/g,'')}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Ku dir dalabka WhatsApp</a>`:'<p class="ce">Tus qofka adeegga lambarkan.</p>')+'<button class="pri" id="cl2">Hagaag</button>')}
+const FB=()=>String(D.fb||'').replace(/\/$/,'');
+let KN=null,AC;
+const beep=()=>{try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();let o=AC.createOscillator(),g=AC.createGain();o.connect(g);g.connect(AC.destination);o.frequency.value=880;g.gain.value=.25;o.start();o.stop(AC.currentTime+.5)}catch(e){}if(navigator.vibrate)navigator.vibrate(300)};
+function staff(){S.of='act';KN=null;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();AC.resume()}catch(e){}
+ sh('<h1 class="c">Dalabaadka</h1><div class="py"><label><input type="radio" name="of" value="act" checked><span>Socda</span></label><label><input type="radio" name="of" value="done"><span>La bixiyay</span></label></div><div id="ol"><p class="ce">…</p></div>','full');poll();window.PT=setInterval(poll,5000)}
+async function poll(){let el=$('#ol');if(!el)return;
+ if(!FB()){el.innerHTML='<p class="ce">Database lama xirin (Settings → Dalabaadka).</p>';return}
+ try{let rs=await fetch(FB()+'/orders.json?orderBy=%22%24key%22&limitToLast=60'),o=await rs.json()||{};if(o.error)throw 0;el=$('#ol');if(!el)return;
+  let L=Object.keys(o).map(k=>Object.assign({k},o[k])).reverse();
+  if(KN&&L.some(x=>x.st=='cusub'&&!KN[x.k]))beep();KN={};L.forEach(x=>KN[x.k]=1);
+  let F=L.filter(x=>S.of=='act'?x.st!='bixiyay':x.st=='bixiyay');
+  el.innerHTML=F.length?F.map(x=>`<div class="tk ${x.st}"><div class="op" style="border:0;padding:0"><b>#${x.no} · Miiska ${esc(x.tbl)}</b><span class="sb">${Math.max(0,Math.round((Date.now()-x.t)/60000))} daq kahor</span></div><div style="margin:6px 0">${esc(x.l).replace(/\n/g,'<br>')}</div><div class="op" style="border:0;padding:0"><b>${fmt(x.tot)}</b><span class="sb">${esc(x.pay)}</span></div>${x.st=='bixiyay'?'':`<button class="pri" data-st="${x.k}" data-n="${x.st=='cusub'?'diyaar':'bixiyay'}">${x.st=='cusub'?'Diyaarso':'La bixiyay'}</button>`}</div>`).join(''):'<p class="ce">Dalab ma jiro</p>'}
+ catch(e){el.innerHTML='<p class="ce">Dalabaadka lama helin. Hubi URL-ka iyo rules-ka.</p>'}}
+const ln=a=>(a||[]).map(o=>o.n+'='+o.p).join('\n');
+function setg(){
+ let h='<h1 class="c">⚙ Settings</h1><div class="tabs">'+['Guud','Qaybaha','Cuntada','Lacagta','Bixinta','Dalabaadka','QR & Kaydi'].map((x,i)=>`<button class="${S.tab==i?'on':''}" data-tab="${i}">${x}</button>`).join('')+'</div>';
+ const A=(a,i,f,v,t='')=>`data-a="${a}" data-i="${i}" data-f="${f}" ${t} value="${esc(v)}"`;
+ if(S.tab==0)h+=`<label class="f">Magaca</label><input ${A('g',0,'name',D.name)}><label class="f">Logo-ga hotelka</label><input type="file" accept="image/*" id="lgf"><label class="f">Lambarka cabashada</label><input ${A('g',0,'phone',D.phone)}><label class="f">WhatsApp-ka dalabka (tusaale 252907283347)</label><input ${A('g',0,'wa',D.wa)}><label class="f">Tirada miisaska</label><input type="number" ${A('g',0,'tb',D.tb)}><label class="f">PIN-ka settings</label><input ${A('g',0,'pin',D.pin)}>`;
+ if(S.tab==1)h+=D.cats.map((c,i)=>`<div class="rw"><input class="e" ${A('cats',i,'e',c.e)}><input ${A('cats',i,'n',c.n)}><button data-del="cats" data-i="${i}">🗑</button></div>`).join('')+'<button class="pri" data-add="cats">+ Qayb cusub</button>';
+ if(S.tab==2)h+='<p class="sb">Haddii noocyo jiraan, qiimaha nooc kasta ayaa la isticmaalaa.</p>'+D.items.map((m,i)=>`<details class="it"><summary>${m.e} ${esc(m.n)}</summary><div class="rw"><input class="e" ${A('items',i,'e',m.e)}><input ${A('items',i,'n',m.n)}></div><div class="rw"><select data-a="items" data-i="${i}" data-f="c">${D.cats.map(c=>`<option value="${c.id}"${c.id==m.c?' selected':''}>${esc(c.n)}</option>`).join('')}</select><input type="number" step="0.01" ${A('items',i,'p',m.p)}></div><label class="f">Noocyada (magac=qiime, mid sadar ah)</label><textarea rows="3" data-a="items" data-i="${i}" data-f="v">${esc(ln(m.v))}</textarea><label class="f">Dheeraad (magac=qiime)</label><textarea rows="3" data-a="items" data-i="${i}" data-f="x">${esc(ln(m.x))}</textarea><label class="f"><input type="checkbox" data-a="items" data-i="${i}" data-f="on"${m.on!==false?' checked':''}> Diyaar ah</label><button data-del="items" data-i="${i}">🗑 Tirtir</button></details>`).join('')+'<button class="pri" data-add="items">+ Cunto cusub</button>';
+ if(S.tab==3)h+='<p class="sb">1 USD = imisa? Qiime kasta ku qor.</p>'+D.cur.map((c,i)=>`<div class="rw"><input ${A('cur',i,'c',c.c)}><input class="e" ${A('cur',i,'s',c.s)}><input type="number" ${A('cur',i,'r',c.r)}>${D.cur.length>1?`<button data-del="cur" data-i="${i}">🗑</button>`:''}</div>`).join('')+'<button class="pri" data-add="cur">+ Lacag cusub</button>';
+ if(S.tab==4)h+='<p class="sb">Magaca iyo lambarka macmiilku ku bixinayo. Mid kasta waa la beddeli karaa.</p>'+D.pay.map((p,i)=>`<div class="rw"><input ${A('pay',i,'n',p.n)}><input inputmode="tel" placeholder="Lambarka" ${A('pay',i,'no',p.no)}><button data-del="pay" data-i="${i}">🗑</button></div>`).join('')+'<button class="pri" data-add="pay">+ Habka cusub</button>';
+ if(S.tab==5)h+=`<p class="sb">Si dalabku shaashadda cashier-ka ugu soo baxo, waxaa loo baahan yahay Firebase Realtime Database (bilaash).</p><label class="f">Firebase Database URL</label><input placeholder="https://magaca-default-rtdb.firebaseio.com" ${A('g',0,'fb',D.fb)}><h3>Shaqaalaha (dalabaadka oo keliya arka)</h3>`+D.staff.map((s,i)=>`<div class="rw"><input ${A('staff',i,'n',s.n)}><input inputmode="numeric" placeholder="PIN" ${A('staff',i,'pin',s.pin)}><button data-del="staff" data-i="${i}">🗑</button></div>`).join('')+'<button class="pri" data-add="staff">+ Shaqaale cusub</button><p class="sb">Shaqaaluhu wuxuu taabanayaa ⚙ Maamul, wuxuuna galinayaa PIN-kiisa.</p>';
+ if(S.tab==6)h+=`<p class="sb">QR-ku wuxuu u dhigmaa link-ga website-ka ee hadda furan. Marka hore website-ka host-garee, kaddibna halkan ka fur.</p><div id="qr"></div><p class="ce" style="word-break:break-all">${esc(location.href.split('#')[0])}</p><button class="pri" id="qd">Soo deg QR code</button><button class="pri" id="ex">Kaydi menu cusub (index.html)</button><p class="sb">Isbeddellada waxay ku kaydsan yihiin taleefankan. Si macmiilku u arko, kaydi faylka oo mar kale host-ga ku soo rar.</p><button class="pri" id="rs" style="background:#8b7565">Tirtir isbeddellada</button>`;
+ sh(h,'full');
+ if(S.tab==6){if(window.QRCode)new QRCode($('#qr'),{text:location.href.split('#')[0],width:220,height:220});else $('#qr').textContent='Internet ku xidh si QR u muuqdo'}}
+const ex=()=>{save();let c=document.documentElement.cloneNode(true);c.querySelector('#dt').textContent=JSON.stringify(D).replace(/</g,'\\u003c');c.querySelectorAll('[data-dyn]').forEach(e=>e.innerHTML='');c.querySelector('#ov').classList.remove('show');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['<!doctype html>\n'+c.outerHTML],{type:'text/html'}));a.download='index.html';a.click()};
+document.addEventListener('click',e=>{if(e.target.id=='ov'){hide();return}let t=e.target.closest('button,a');if(!t)return;let d=t.dataset,id=t.id;
+ if(d.ci!==undefined){S.ci=+d.ci;try{localStorage.setItem('jpc',S.ci)}catch(x){}render()}
+ else if(d.cat){S.cat=d.cat;render()}
+ else if(d.it)item(d.it);
+ else if(id=='ob')cart();
+ else if(id=='cl'||id=='cl2')hide();
+ else if(d.q!==undefined){let l=S.cart[d.q];l.q+=+d.d;if(l.q<1)S.cart.splice(d.q,1);bar();S.cart.length?cart():hide()}
+ else if(id=='sd'){t.disabled=true;send()}
+ else if(d.st){fetch(FB()+'/orders/'+d.st+'.json',{method:'PATCH',body:JSON.stringify({st:d.n})}).then(poll)}
+ else if(d.cp){if(navigator.clipboard)navigator.clipboard.writeText(d.cp);t.textContent='✓ La koobiyeeyay'}
+ else if(id=='gear'){let p=prompt('Gali PIN-ka settings');if(p!==null&&p===String(D.pin)){S.tab=0;setg()}else if(p&&D.staff.some(x=>x.pin===p))staff();else if(p!==null)alert('PIN khaldan')}
+ else if(d.tab){S.tab=+d.tab;setg()}
+ else if(d.del){D[d.del].splice(d.i,1);save();setg();render()}
+ else if(d.add){let n={cats:{id:'c'+Date.now(),n:'Qayb cusub',e:'🍴'},items:{id:Date.now(),c:D.cats[0]?D.cats[0].id:'',e:'🍽️',n:'Cunto cusub',p:1},cur:{c:'ETB',s:'Br',r:120},pay:{n:'Habka cusub',no:''},staff:{n:'Shaqaale',pin:''}}[d.add];D[d.add].push(n);save();setg();render()}
+ else if(id=='qd'){let c=$('#qr canvas');if(c){let a=document.createElement('a');a.href=c.toDataURL();a.download='qr-menu.png';a.click()}}
+ else if(id=='ex')ex();
+ else if(id=='rs'&&confirm('Tirtir isbeddellada oo dib u noqo asalka?')){localStorage.removeItem('jpd');location.reload()}});
+document.addEventListener('change',e=>{let t=e.target;
+ if(t.id=='tb')S.tbl=t.value;
+ if(t.name=='py'){S.pay=t.value;$('#pn').innerHTML=payInfo()}
+ if(t.name=='of'){S.of=t.value;poll()}
+ if(t.id=='lgf'&&t.files[0]){let r=new FileReader;r.onload=()=>{let i=new Image;i.onload=()=>{let c=document.createElement('canvas'),s=Math.min(1,220/Math.max(i.width,i.height));c.width=i.width*s;c.height=i.height*s;c.getContext('2d').drawImage(i,0,0,c.width,c.height);D.logo=c.toDataURL('image/png');save();render()};i.src=r.result};r.readAsDataURL(t.files[0])}
+ let a=t.dataset.a;if(!a)return;let f=t.dataset.f,v=t.type=='checkbox'?t.checked:t.value;
+ if(a=='g')D[f]=v;else{let o=D[a][t.dataset.i];
+  if(f=='p'||f=='r')v=parseFloat(v)||0;
+  if(f=='v'||f=='x')v=v.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{let[n,p]=l.split('=');return{n:n.trim(),p:parseFloat(p)||0}});
+  o[f]=v}
+ save();render()});
+$('#q').oninput=e=>{S.q=e.target.value;render()};
+document.addEventListener('keydown',e=>{if(e.key=='Escape')hide()});
+render();
+</script>
+<grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important;"></grammarly-desktop-integration></body></html>
